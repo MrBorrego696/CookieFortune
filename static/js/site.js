@@ -19,9 +19,9 @@ var fortuna = function () {
     //Se guarda el index en una variable
     var mensaje = Frase[fraseAleatoria];
     swal({
-        title: "Galleta Abierta!",
+        title: "¡Galleta Abierta!",
         text: mensaje,
-        imageUrl: "./images/cookie.png"
+        imageUrl: "./img/cookie.png"
     });
     /*swal(mensaje);*/
 };
