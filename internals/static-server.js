@@ -10,7 +10,7 @@ exports.serve = function (url, res) {
     fs.exists(urlPath, function (exists) {
         if (!exists) {
             //No existe
-            console.log("No esta papi".error);
+            console.log("No esta papi".error + urlPath);
             res.writeHead(404, {
                 'Content-Type': 'text/html'
             });

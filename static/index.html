@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Mi sitio asombroso</title>
     <link rel="stylesheet" href="./vendor/sweetalert/dist/sweetalert.css">
     <link rel="stylesheet" href="./css/site.css">
     <link rel="icon" href="./img/icono.png" type="image/png">
+
 </head>
+
 <body>
-    <h1>Alan Islas</h1>
-    <h2>Galleta de la fortuna</h2>
-    <p>
-        Para saber su fortuna presione el boton
-    </p>
-    <p>
-        <button onclick="fortuna()">
-            Romper Galleta</button>
-    </p>
-    <!--Importando sweetalert-->
-    <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>    
-    <script src="./js/site.js"></script>    
-    
+   <div class="parallax-container">
+      <div class="parallax"><img src="./img/background1.jpg">Parallax</div>
+        <div>
+            <center><h2>Galleta de la fortuna</h2></center>
+            <h5 class="center-align">Para saber su fortuna presione el boton</h5>
+            <center><a class="waves-effect waves-light btn-large center-align" onclick="getFortuneFromServer()">Button</a></center>
+        </div>
+      </div>
 </body>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Programaci&oacute;n de Aplicaciones Web</h5>
+                  <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s10">
+              <img src="./img/cookieMonster.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                Islas Viveros Alan.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Contactame</h5>
+                <ul>
+                    <img class="responsive-img" src="./img/facebook.png" onclick="location.href = 'https://www.facebook.com/alan.islasviveros'">
+                    <img class="responsive-img" src="./img/twitter.png" onclick="location.href = 'https://twitter.com/IslasMetal'">
+                    <img class="responsive-img" src="./img/google.png" onclick="location.href = 'https://plus.google.com/117528949425617809636'">
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<!--Importando Jquery-->
+<script src="./vendor/jquery/dist/jquery.min.js"></script>
+<!--Importando sweetalert-->
+<script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./js/site.js"></script>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="./vendor/materialize/dist/css/materialize.min.css">
+<!-- Compiled and minified CSS -->
+<script src="./vendor/materialize/dist/js/materialize.min.js"></script>
+
 </html>

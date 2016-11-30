@@ -25,3 +25,21 @@ var fortuna = function () {
     });
     /*swal(mensaje);*/
 };
+//Asincrona
+var getFortuneFromServer = function () {
+    //Realizando la peticiión con Ajax
+    //Variable pesitos ñ_ñ
+    $.get("/getfortune", "", function (data, status) {
+        console.log("> Estatus de Respuesta: " + status);
+        if(status == 'succes'){
+            swal({
+            title: "¡Galleta Abierta!",
+            text: data.message,
+            imageUrl: "./img/cookie.png"
+        });
+        }else{
+            fortuna();
+        }
+        
+    });
+};
