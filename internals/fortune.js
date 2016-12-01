@@ -20,7 +20,7 @@ module.exports = {
         // Armando Objeto Respuesta
         // Convertir en cadena escrita el Objeto Json
         var fortunePaperObj = JSON.stringify({
-            "Cookie": fortuneMessage
+            "message": fortuneMessage
         });
         //Ejecutp el callback pasandole el parametro fortunePaper
         cb(fortunePaperObj);

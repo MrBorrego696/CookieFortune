@@ -17,9 +17,9 @@ var fortuna = function () {
     fraseAleatoria = Math.random() * Frase.length;
     fraseAleatoria = Math.floor(fraseAleatoria);
     //Se guarda el index en una variable
-    var mensaje = Frase[fraseAleatoria];
+    var mensaje = Frase[fraseAleatoria]
     swal({
-        title: "¡Galleta Abierta!",
+        title: "¡Galleta Abiertaaa!",
         text: mensaje,
         imageUrl: "./img/cookie.png"
     });
@@ -31,15 +31,17 @@ var getFortuneFromServer = function () {
     //Variable pesitos ñ_ñ
     $.get("/getfortune", "", function (data, status) {
         console.log("> Estatus de Respuesta: " + status);
-        if(status == 'succes'){
+        if (status == 'succes') {
             swal({
-            title: "¡Galleta Abierta!",
-            text: data.message,
-            imageUrl: "./img/cookie.png"
-        });
-        }else{
+                title: "¡Galleta Rota!",
+                text: data.message,
+                imageUrl: "./img/cookie.png"
+            });
+        } else {
+            console.log("Se utlizo site.js");
             fortuna();
         }
-        
+
     });
 };
+

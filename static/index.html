@@ -1,64 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Mi sitio asombroso</title>
-    <link rel="stylesheet" href="./vendor/sweetalert/dist/sweetalert.css">
-    <link rel="stylesheet" href="./css/site.css">
-    <link rel="icon" href="./img/icono.png" type="image/png">
+    <title>Cookie Fortunes</title>
+    <link rel="stylesheet" href="./vendor/sweetalert/dist/sweetalert.css"/>
+    <link rel="stylesheet" href="./css/site.css"/>
+    <link rel="icon" href="./img/icono.png" type="image/png"/>
 
-</head>
+  </head>
 
-<body>
-   <div class="parallax-container">
-      <div class="parallax"><img src="./img/background1.jpg">Parallax</div>
-        <div>
-            <center><h2>Galleta de la fortuna</h2></center>
-            <h5 class="center-align">Para saber su fortuna presione el boton</h5>
-            <center><a class="waves-effect waves-light btn-large center-align" onclick="getFortuneFromServer()">Button</a></center>
-        </div>
+  <body>
+    <!--Inicio Barra de navegación/titulo-->
+    <nav>
+      <div class="nav-wrapper   light-blue lighten-3">
+        <img class="responsive-img" src="./img/Barra.png" width="530px" height="300px">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a class="waves-effect waves-light btn" href="#modal1">Instituto Tecnológico de Gustavo A. Madero</a></li>
+        </ul>
       </div>
-</body>
-<footer class="page-footer">
-    <div class="container">
+    </nav>
+    <!--Fin Barra de navegación/titulo-->
+    
+    <h1 class="center-align white-text">Cookie Fortune</h1>
+    <h5 class="center-align  white-text">¡Es hora de conocer tu destino!</h5>
+    <!--Inicio Contenido-->
+    <div class="parallax-container">
+      <center><img src="./img/fondo.jpg"></center>
+    <div class="center">
+        <a class="waves-effect waves-light btn-large  center-align  light-blue darken-3" onclick="getFortuneFromServer()">Abrir Galleta</a>
+      </div>  
+    </div>
+    <!--Fin de Contenido-->
+    
+    <!--Inicio del Footer-->
+    <footer class="page-footer  light-blue lighten-3">
+      <div class="container">
         <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Programaci&oacute;n de Aplicaciones Web</h5>
-                  <div class="col s12 m8 offset-m2 l6 offset-l3">
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s10">
-              <img src="./img/cookieMonster.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+          <div class="col l6 s12">
+            <h5 class="white-text"><a class="waves-effect waves-light btn">PAW 2016 Matutino</a></h5>
+            <div class="col s12 m8 offset-m2 l6 offset-l3">
+              <div class="card-panel grey lighten-5 z-depth-1">
+                <div class="row valign-wrapper">
+                  <div class="col s10">
+                    <img src="./img/cookieMonster.png" alt="" class="circle responsive-img">
+                    <!-- notice the "circle" class -->
+                  </div>
+                  <div class="col s10">
+                    <span class="black-text">
+                  Islas Viveros Alan.
+                </span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col s10">
-              <span class="black-text">
-                Islas Viveros Alan.
-              </span>
-            </div>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text"><a class="waves-effect waves-light btn">Contactame</a></h5>
+            <ul>
+              <img class="responsive-img" src="./img/facebook.png" onclick="location.href = 'https://www.facebook.com/alan.islasviveros'">
+              <img class="responsive-img" src="./img/twitter.png" onclick="location.href = 'https://twitter.com/IslasMetal'">
+              <img class="responsive-img" src="./img/google.png" onclick="location.href = 'https://plus.google.com/117528949425617809636'">
+            </ul>
           </div>
         </div>
       </div>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Contactame</h5>
-                <ul>
-                    <img class="responsive-img" src="./img/facebook.png" onclick="location.href = 'https://www.facebook.com/alan.islasviveros'">
-                    <img class="responsive-img" src="./img/twitter.png" onclick="location.href = 'https://twitter.com/IslasMetal'">
-                    <img class="responsive-img" src="./img/google.png" onclick="location.href = 'https://plus.google.com/117528949425617809636'">
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-<!--Importando Jquery-->
-<script src="./vendor/jquery/dist/jquery.min.js"></script>
-<!--Importando sweetalert-->
-<script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
-<script src="./js/site.js"></script>
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="./vendor/materialize/dist/css/materialize.min.css">
-<!-- Compiled and minified CSS -->
-<script src="./vendor/materialize/dist/js/materialize.min.js"></script>
-
-</html>
+  </body>
+  <!--Importando site.js-->
+  <script src="./js/site.js"></script>
+  <script src="./js/materialize.js"></script>
+  <!--Importando Jquery-->
+  <script src="./vendor/jquery/dist/jquery.min.js"></script>
+  <!--Importando sweetalert-->
+  <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="./vendor/materialize/dist/css/materialize.min.css"/>
+  <script src="./vendor/materialize/dist/js/materialize.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  </html>

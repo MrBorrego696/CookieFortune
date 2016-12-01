@@ -7,3 +7,16 @@ p{
 h2{
     color: #f40;
 }
+
+.parallax{
+  position:static;
+}
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+   height: 500px;
+  }
+body {
+    background-image: url("../img/china.jpeg");
+    background-color: #ffffff;
+}
