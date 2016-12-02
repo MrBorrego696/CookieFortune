@@ -1,5 +1,5 @@
 
-var fortunePapers = [
+/*var fortunePapers = [
     "Fortuna no encontrada: ¿Abortar, Reintentar o Ignorar?",
     "¿Puedes darme la dirección? (“¿A dónde?”) A tu corazón.",
     "Si eres bueno para algo, nunca lo hagas gratis.",
@@ -24,5 +24,33 @@ module.exports = {
         });
         //Ejecutp el callback pasandole el parametro fortunePaper
         cb(fortunePaperObj);
+    }
+};*/
+
+var mongo = require("mongodb");
+var mongoClient = mongo.MongoClient;
+
+module.exports = {
+    "getFortune": function (cb) {
+        //Logica que obtiene un mensaje aleatorio
+        mongoClient.connect("mongodb://127.0.0.1:27017/fortuneapp",
+        function(err, db){
+            var papers = db.collection("papers");
+
+            var consulta = papers.find({});
+
+            consulta.toArray(function(err, data){
+
+                var selector = Math.round(Math.random(0)* data.length);
+                console.log("message" + selector);
+                // Armando Objeto Respuesta
+                // Convertir en cadena escrita el Objeto Json
+                var fortunePaperObj = JSON.stringify(data[selector]);
+                // Cerrar mongo
+                db.close();
+                //Ejecutp el callback pasandole el parametro fortunePaper
+                cb(fortunePaperObj);
+            });
+        });
     }
 };

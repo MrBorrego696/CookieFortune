@@ -26,22 +26,22 @@ var fortuna = function () {
     /*swal(mensaje);*/
 };
 //Asincrona
-var getFortuneFromServer = function () {
-    //Realizando la peticiión con Ajax
-    //Variable pesitos ñ_ñ
-    $.get("/getfortune", "", function (data, status) {
-        console.log("> Estatus de Respuesta: " + status);
-        if (status == 'succes') {
+var getFortuneFromServer = function(){
+    //Realizando la peticion con AJAX
+    //function(data, status).....cb recibe 2 parametros, la infromacion que obtuvo, estatus
+    $.get("/getfortune", "", function(data, status){
+        console.log("> Estatus de respuesta " + status);
+        if(status == "success"){
+            // swal(data.message);
             swal({
                 title: "¡Galleta Rota!",
-                text: data.message,
-                imageUrl: "./img/cookie.png"
+                imageUrl: "./img/cookie.png",
+                text: data.message
             });
-        } else {
-            console.log("Se utlizo site.js");
+        }else{
+            console.log("Error en la fortuna");
             fortuna();
-        }
-
-    });
+        } 
+    }, "json");
 };
 
