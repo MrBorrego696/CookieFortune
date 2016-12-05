@@ -1,81 +1,120 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Cookie Fortunes</title>
-    <link rel="stylesheet" href="./vendor/sweetalert/dist/sweetalert.css"/>
-    <link rel="stylesheet" href="./css/site.css"/>
-    <link rel="icon" href="./img/icono.png" type="image/png"/>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Cookie Fortune</title>
 
-  </head>
+  <meta charset="UTF-8">
+  <title>Cookie Fortune</title>
+  <link rel="stylesheet" href="./css/site.css">
+  <link rel="icon" href="./img/icono.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="./vendor/sweetalert/dist/sweetalert.css">
 
-  <body>
-    <!--Inicio Barra de navegación/titulo-->
-    <nav>
-      <div class="nav-wrapper   light-blue lighten-3">
-        <img class="responsive-img" src="./img/Barra.png" width="530px" height="300px">
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="waves-effect waves-light btn" href="#modal1">Instituto Tecnológico de Gustavo A. Madero</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!--Fin Barra de navegación/titulo-->
-    
-    <h1 class="center-align white-text">Cookie Fortune</h1>
-    <h5 class="center-align  white-text">¡Es hora de conocer tu destino!</h5>
-    <!--Inicio Contenido-->
-    <div class="parallax-container">
-      <center><img src="./img/fondo.jpg"></center>
-    <div class="center">
-        <a class="waves-effect waves-light btn-large  center-align  light-blue darken-3" onclick="getFortuneFromServer()">Abrir Galleta</a>
-      </div>  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body background="./img/china.jpeg">
+  <!--Inicio Barra de navegación/titulo-->
+  <nav>
+    <div class="nav-wrapper   white lighten-3">
+      <center><img class="responsive-img" src="./img/Barra.png" width="530px" height="300px"></center>
+
     </div>
-    <!--Fin de Contenido-->
-    
-    <!--Inicio del Footer-->
-    <footer class="page-footer  light-blue lighten-3">
+  </nav>
+  </br>
+  <!--Fin Barra de navegación/titulo-->
+  <div class="container">
+    <div class="section">
+
+    </div>
+    <!--Importando Jquery-->
+    <script src="./vendor/jquery/dist/jquery.min.js"></script>
+    <!--importando sweetalert-->
+    <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/site.js">    
+    </script>
+
+
+  </div>
+  </nav>
+  <div id="index-banner" class=" center parallax-container">
+    <div class="section no-pad-bot">
       <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text"><a class="waves-effect waves-light btn">PAW 2016 Matutino</a></h5>
-            <div class="col s12 m8 offset-m2 l6 offset-l3">
-              <div class="card-panel grey lighten-5 z-depth-1">
-                <div class="row valign-wrapper">
-                  <div class="col s10">
-                    <img src="./img/cookieMonster.png" alt="" class="circle responsive-img">
-                    <!-- notice the "circle" class -->
-                  </div>
-                  <div class="col s10">
-                    <span class="black-text">
-                  Islas Viveros Alan.
-                </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text"><a class="waves-effect waves-light btn">Contactame</a></h5>
+        <br><br>
+        <h1 class="header center yellow-text">Cookie Fortune</h1>
+        <div class="row center">
+          <center><img class="responsive-img" src="./img/fondo.jpg" width="530px" height="300px"></center>
+        </div>
+        <div class="row center">
+
+
+          <p>
+            <button onclick="getFortuneFromServer()" class="btn-large waves-effect waves-light orange">
+            Abrir Galleta</button>
+          </p>
+
+        </div>
+
+        <br><br>
+
+      </div>
+    </div>
+
+
+    <div class="parallax"><img src="./img/china.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+      <!--Mascomentarios-->
+    </div>
+
+  </div>
+  <div class="container">
+    <div class="section">
+      <!--Mascomentarios-->
+    </div>
+
+  </div>
+
+  <!--Inicio del Footer-->
+  <footer class="page-footer  light-blue lighten-3">
+    <div class="col s12 m7">
+
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="./img/cookieMonster.png" width="100dp" height="100dp">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <h3 class="header">Islas Viveros Alan</h3>
+            PAW Matutino Ago-Dic 2016
             <ul>
               <img class="responsive-img" src="./img/facebook.png" onclick="location.href = 'https://www.facebook.com/alan.islasviveros'">
               <img class="responsive-img" src="./img/twitter.png" onclick="location.href = 'https://twitter.com/IslasMetal'">
               <img class="responsive-img" src="./img/google.png" onclick="location.href = 'https://plus.google.com/117528949425617809636'">
             </ul>
           </div>
+
         </div>
       </div>
-  </body>
-  <!--Importando site.js-->
-  <script src="./js/site.js"></script>
-  <script src="./js/materialize.js"></script>
-  <!--Importando Jquery-->
-  <script src="./vendor/jquery/dist/jquery.min.js"></script>
-  <!--Importando sweetalert-->
-  <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="./vendor/materialize/dist/css/materialize.min.css"/>
-  <script src="./vendor/materialize/dist/js/materialize.min.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  </html>
+    </div>
+
+
+    </div>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+</body>
+
+</html>

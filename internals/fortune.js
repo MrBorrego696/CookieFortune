@@ -29,11 +29,13 @@ module.exports = {
 
 var mongo = require("mongodb");
 var mongoClient = mongo.MongoClient;
+var UrlOnline = 'mongodb://AlanIslas:Operativos_696@ds119618.mlab.com:19618/fortuneapp';
+var UrlOffline = 'mongodb://127.0.0.1:27017/fortuneapp';
 
 module.exports = {
     "getFortune": function (cb) {
         //Logica que obtiene un mensaje aleatorio
-        mongoClient.connect("mongodb://127.0.0.1:27017/fortuneapp",
+        mongoClient.connect(UrlOffline,
         function(err, db){
             var papers = db.collection("papers");
 

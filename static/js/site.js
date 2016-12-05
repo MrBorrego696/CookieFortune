@@ -1,6 +1,5 @@
 Frase =
-    [
-        "Fortuna no encontrada: ¿Abortar, Reintentar o Ignorar?",
+    ["Fortuna no encontrada: ¿Abortar, Reintentar o Ignorar?",
         "¿Puedes darme la dirección? (“¿A dónde?”) A tu corazón",
         "Si eres bueno para algo, nunca lo hagas gratis",
         "Ya era hora de que saliera de esa galleta",
