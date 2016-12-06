@@ -35,7 +35,7 @@ var UrlOffline = 'mongodb://127.0.0.1:27017/fortuneapp';
 module.exports = {
     "getFortune": function (cb) {
         //Logica que obtiene un mensaje aleatorio
-        mongoClient.connect(UrlOffline,
+        mongoClient.connect(UrlOnline,
         function(err, db){
             var papers = db.collection("papers");
 
